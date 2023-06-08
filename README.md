@@ -4,11 +4,11 @@ Shepherd is an innovative mobile service, designed as an assistant for individua
 
 ## Alpha Release
 
-Our Alpha release is planned for [planned date/month], which will provide early testers a first look at the core features of Shepherd. This release is intended to be used for testing purposes to identify bugs and gather user feedback for improvements.
+Our Alpha release is planned for Q3 2023, which will provide early testers a first look at the core features of Shepherd. This release is intended to be used for testing purposes to identify bugs and gather user feedback for improvements.
 
 ## Development Status
 
-As of [Date], Shepherd is in the initial development phase, with its core functionalities and features currently being built.
+As of May 2023, Shepherd is in the initial development phase, with its core functionalities and features currently being built.
 
 Current version includes:
 
