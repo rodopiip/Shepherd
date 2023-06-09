@@ -9,5 +9,4 @@ public class ShepherdBeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ShepherdBeApplication.class, args);
 	}
-
 }

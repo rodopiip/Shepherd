@@ -5,10 +5,16 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema shepherd
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
 -- Schema shepherd
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `shepherd` DEFAULT CHARACTER SET utf8mb3 ;
-
 USE `shepherd` ;
 
 -- -----------------------------------------------------
@@ -71,6 +77,54 @@ CREATE TABLE IF NOT EXISTS `shepherd`.`alarms` (
     REFERENCES `shepherd`.`tunes` (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
+
+
+-- -----------------------------------------------------
+-- Table `shepherd`.`mental_health_resources`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `shepherd`.`mental_health_resources` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(200) NULL DEFAULT NULL,
+  `url` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `shepherd`.`privacy_settings`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `shepherd`.`privacy_settings` (
+  `user_id` INT NOT NULL,
+  `show_online_status` TINYINT(1) NULL DEFAULT NULL,
+  `allow_data_collection` TINYINT(1) NULL DEFAULT NULL,
+  `share_personal_info` TINYINT(1) NULL DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  CONSTRAINT `privacy_settings_ibfk_1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `shepherd`.`users` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
+
+-- -----------------------------------------------------
+-- Table `shepherd`.`time_management_settings`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `shepherd`.`time_management_settings` (
+  `user_id` INT NOT NULL,
+  `daily_usage_limit` INT NULL DEFAULT NULL,
+  `break_reminder_interval` INT NULL DEFAULT NULL,
+  `automatic_shutdown_time` TIME NULL DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  CONSTRAINT `time_management_settings_ibfk_1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `shepherd`.`users` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
