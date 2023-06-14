@@ -1,0 +1,38 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="Maria">
+        <sqlFile path="changes/create_schema.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="2" author="Maria">
+        <sqlFile path="changes/create_users.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="3" author="Maria">
+        <sqlFile path="changes/create_tasks.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="4" author="Maria">
+        <sqlFile path="changes/create_tunes.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="5" author="Maria">
+        <sqlFile path="changes/create_alarms.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="6" author="Maria">
+        <sqlFile path="changes/create_mental_health_resources.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="7" author="Maria">
+        <sqlFile path="changes/create_privacy_settings.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="8" author="Maria">
+        <sqlFile path="changes/create_time_management_settings.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+</databaseChangeLog>

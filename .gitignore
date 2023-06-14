@@ -1,10 +1,17 @@
-**/src/main/resources/
-application.properties
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Include all .sql files in db/changelog/changes
+!**/src/main/resources/db/changelog/changes/*.sql
+
+# Ignore application.properties
+**/src/main/resources/application.properties
 
 # Compiled class file
 *.class
-# Include all .sql files
-!**/src/main/resources/db/changelog/changes/*.sql
 
 # Log file
 *.log
@@ -24,6 +31,34 @@ application.properties
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# virtual machine crash logs
 hs_err_pid*
 replay_pid*
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
