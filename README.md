@@ -10,29 +10,36 @@ Our Alpha release is planned for Q3 2023, which will provide early testers a fir
 
 As of May 2023, Shepherd is in the initial development phase, with its core functionalities and features currently being built.
 
-Current version includes:
+### Update as of June 14, 2023:
 
-- Basic database structure with MySQL Workbench
-- Essential API endpoints
+We've made significant progress on the database architecture. Hibernate entity classes for each table have been created, and we've relocated the database to a local machine for focused troubleshooting and further development. The connectivity issues encountered with AWS led to this change of course. Our efforts are currently centered on the Liquibase aspect of the API.
 
-The following features are planned but not yet implemented:
+Today's challenges were numerous, but we tackled each one head-on. Although the API is not currently runnable, we're confident we're moving in the right direction.
 
-- Migration to AWS for remote database management
-- Comprehensive unit tests
-- Full set of API endpoints
-- Integration with mobile front-end
+### Planned Next Steps:
+
+- Implement Log4j for better log management and tracing, aiding in future troubleshooting.
+- Resume efforts to establish a remote database connection with AWS once the API issues have been resolved.
+- Extend our set of API endpoints.
+- Establish a comprehensive suite of unit tests.
+- Begin integration efforts with the mobile front-end once the API is stable.
 
 Please note that while we're working hard to bring these features to life, this is a preliminary plan and could change as the project evolves.
 
 ## Technology Stack
 
-### Planned:
+### Current:
 
 - **Languages & Frameworks**: Java
-- **Database & Persistence**: MySQL, AWS (in progress)
+- **Database & Persistence**: MySQL
+- **Development Environment**: IntelliJ IDEA
+
+### Planned:
+
+- **Database & Persistence**: AWS
 - **Build & Dependency Management**: [To be decided]
 - **Testing & Documentation**: [To be decided]
-- **Utilities & Libraries**: [To be decided]
-- **Development Environment**: IntelliJ IDEA
+- **Utilities & Libraries**: Log4j
+- **Other Technologies**: [To be decided]
 
 We appreciate your interest in Shepherd and look forward to sharing our progress. Stay tuned!
