@@ -1,8 +1,10 @@
-Shepherd_BE/src/main/resources/
+**/src/main/resources/
 application.properties
 
 # Compiled class file
 *.class
+# Include all .sql files
+!**/src/main/resources/db/changelog/changes/*.sql
 
 # Log file
 *.log
