@@ -1,4 +1,4 @@
-package com.example.shepherd_be.models;
+package com.example.shepherd_be.models.entities;
 
 import jakarta.persistence.*;
 

@@ -1,10 +1,10 @@
-package com.example.shepherd_be.models;
+package com.example.shepherd_be.models.entities;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tunes")
-public class Tune {
+@Table(name = "users")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,9 +13,5 @@ public class Tune {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "url")
-    private String url;
-
-    //todo:  Getters and setters...
+    // todo: Getters and setters...
 }
-
