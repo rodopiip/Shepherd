@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "c8b1ba44-248c-4ea6-a3a8-bc2b9194f91f",
+		"name": "Shepherd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "26793882-c8b1ba44-248c-4ea6-a3a8-bc2b9194f91f"
+	},
+	"item": [
+		{
+			"name": "ALARMS",
+			"item": [
+				{
+					"name": "view alarms",
+					"id": "144abac0-df29-464e-9ff7-b8a61358fe05",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/alarms",
+							"path": [
+								"alarms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create alarm",
+					"id": "c21be368-97a1-4078-91d3-8057bd4b8d63",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/alarms",
+							"path": [
+								"alarms"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "7f74871c-ea6b-4d1e-a9d7-3d4e2e5ed60d"
+		},
+		{
+			"name": "MENTAL HEALTH RESOURCES",
+			"item": [],
+			"id": "ca52bd14-104c-489a-8e77-4a59f4f062c8"
+		},
+		{
+			"name": "PRIVACY SETTINGS",
+			"item": [],
+			"id": "28edf90d-3b07-4f38-9210-91fdf35ba17d"
+		},
+		{
+			"name": "TASKS",
+			"item": [
+				{
+					"name": "view tasks",
+					"id": "1951dbcc-ac70-4878-9021-79b817f9de4c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/tasks",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create task",
+					"id": "cbf1946f-012e-4fef-8e9b-65ff1053a5f6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/tasks",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"id": "6eee2f6a-3389-415e-97ec-c0878df0857d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "/tasks/{task-id}",
+							"path": [
+								"tasks",
+								"{task-id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"id": "4990a3e5-5a1c-45c7-9faa-468202a18e07",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "/tasks/{task-id}",
+							"path": [
+								"tasks",
+								"{task-id}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "b91f0417-5434-4aa5-aa10-58e341760f15"
+		},
+		{
+			"name": "TIME MANAGEMENT SETTINGS",
+			"item": [],
+			"id": "caa9d305-81b2-4e7b-b2c3-a4a4ac9b906d"
+		},
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "sign up",
+					"id": "480b812c-a54f-4f2e-af0c-c59ae1731f71",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/users",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "log in",
+					"id": "5cd7b5c1-093c-445a-abb3-d35ffbeb4235",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/users/auth",
+							"path": [
+								"users",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"id": "2b022523-9f17-4597-bee4-8572f379bd80",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "/users",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete profile",
+					"id": "da7bf1d6-2b40-462d-b60b-9a81ddaeba71",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "/users",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "e6b28746-201e-41ad-be55-21a3ea968dda"
+		}
+	]
+}
