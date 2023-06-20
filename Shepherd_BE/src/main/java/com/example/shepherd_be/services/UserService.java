@@ -5,7 +5,7 @@ import com.example.shepherd_be.models.DTOs.UserWithoutPassDTO;
 
 //question: does this service class need to extend an abstract service class
 // what for?
-public class UserService /*todo extends AbstractsService*/{
+public class UserService extends AbstractsService{
     public UserWithoutPassDTO login(LoginDTO loginData){
         //todo
         //...

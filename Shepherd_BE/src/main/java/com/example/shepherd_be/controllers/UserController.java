@@ -4,15 +4,13 @@ import com.example.shepherd_be.models.DTOs.UserWithoutPassDTO;
 import com.example.shepherd_be.services.UserService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController extends AbstractController{
-
-    //todo
+    @Autowired
     private UserService userService;
-
+    //POST: log in: /users/auth
     @PostMapping("/users/auth")
     public UserWithoutPassDTO login(@RequestBody LoginDTO loginData, HttpSession session){
         //todo: finish endpoint + session (and other) validations
@@ -21,6 +19,11 @@ public class UserController extends AbstractController{
         return u;
         //todo: add to Postman
     }
-
+    //attention: each of the following endpoints
+    // requires for the user
+    // to be logged in -> HTTPs session
+    //POST: sign up: /users
+    //PUT: update profile: /users
+    //DEL: delete profile: /users
     // ... other endpoints
 }
