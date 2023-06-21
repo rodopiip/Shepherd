@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 public class UserController extends AbstractController{
     @Autowired
     private UserService userService;
+
+    //GET: JWT authentication
+    //GET: JWT validation
     //POST: log in: /users/auth
     @PostMapping("/users/auth")
     public UserWithoutPassDTO login(@RequestBody LoginDTO loginData, HttpSession session){
@@ -21,7 +24,7 @@ public class UserController extends AbstractController{
     }
     //attention: each of the following endpoints
     // requires for the user
-    // to be logged in -> HTTPs session
+    // to be logged in -> JWT validation
     //POST: sign up: /users
     //PUT: update profile: /users
     //DEL: delete profile: /users
