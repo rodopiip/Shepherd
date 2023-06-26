@@ -1,9 +1,17 @@
 package com.example.shepherd_be.models.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Table(name = "tasks")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@EqualsAndHashCode
+@ToString
 public class Task {
 
     @Id
