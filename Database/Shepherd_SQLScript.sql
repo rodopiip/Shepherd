@@ -22,7 +22,11 @@ USE `shepherd` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `shepherd`.`users` (
   `id` INT NOT NULL,
-  `name` VARCHAR(45) NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(50) NOT NULL,
+  `verification_code` VARCHAR(100) NULL DEFAULT NULL,
+  `profile_photo` VARCHAR(255) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
@@ -75,6 +79,41 @@ CREATE TABLE IF NOT EXISTS `shepherd`.`alarms` (
   CONSTRAINT `tune_id`
     FOREIGN KEY (`tune_id`)
     REFERENCES `shepherd`.`tunes` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
+
+-- -----------------------------------------------------
+-- Table `shepherd`.`databasechangelog`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `shepherd`.`databasechangelog` (
+  `ID` VARCHAR(255) NOT NULL,
+  `AUTHOR` VARCHAR(255) NOT NULL,
+  `FILENAME` VARCHAR(255) NOT NULL,
+  `DATEEXECUTED` DATETIME NOT NULL,
+  `ORDEREXECUTED` INT NOT NULL,
+  `EXECTYPE` VARCHAR(10) NOT NULL,
+  `MD5SUM` VARCHAR(35) NULL DEFAULT NULL,
+  `DESCRIPTION` VARCHAR(255) NULL DEFAULT NULL,
+  `COMMENTS` VARCHAR(255) NULL DEFAULT NULL,
+  `TAG` VARCHAR(255) NULL DEFAULT NULL,
+  `LIQUIBASE` VARCHAR(20) NULL DEFAULT NULL,
+  `CONTEXTS` VARCHAR(255) NULL DEFAULT NULL,
+  `LABELS` VARCHAR(255) NULL DEFAULT NULL,
+  `DEPLOYMENT_ID` VARCHAR(10) NULL DEFAULT NULL)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
+
+-- -----------------------------------------------------
+-- Table `shepherd`.`databasechangeloglock`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `shepherd`.`databasechangeloglock` (
+  `ID` INT NOT NULL,
+  `LOCKED` BIT(1) NOT NULL,
+  `LOCKGRANTED` DATETIME NULL DEFAULT NULL,
+  `LOCKEDBY` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
 
