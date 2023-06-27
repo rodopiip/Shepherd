@@ -18,12 +18,20 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @Column(name = "username")
+    @Column(name = "username", nullable = false)
     private String username;
-
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
-    @OneToMany(mappedBy = "user_id", cascade = CascadeType.ALL)
+    @Column(name = "email", nullable = false)
+    private String email;
+    @Column(name = "verification_code")
+    private String verificationCode;
+    @Column(name = "profile_photo")
+    private String profilePhoto;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Task> tasks;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<TimeManagementSettings> timeManagementSettingsList;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<PrivacySettings> privacySettingsList;
 }

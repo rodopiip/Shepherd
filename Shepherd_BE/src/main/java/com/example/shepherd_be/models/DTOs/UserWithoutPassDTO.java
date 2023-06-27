@@ -8,5 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 public class UserWithoutPassDTO {
     private int id;
-    //todo
+    private String username;
+    private String email;
+    private String profilePhoto;
 }

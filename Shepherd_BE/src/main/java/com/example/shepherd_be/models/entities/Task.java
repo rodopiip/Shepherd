@@ -3,6 +3,8 @@ package com.example.shepherd_be.models.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tasks")
 @Getter
@@ -28,6 +30,7 @@ public class Task {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    //todo:  Getters and setters...
+    @OneToMany(mappedBy = "task", cascade = CascadeType.ALL)
+    private List<Alarm> alarms;
 }
 
